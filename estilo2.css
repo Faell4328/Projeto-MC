@@ -1,0 +1,464 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+#protetor_tela{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999999999;
+    opacity: 0.3;
+}
+#protetor_sacola{
+    display: none;
+    position: absolute;
+    width: 100px;
+    height: 80px;
+    z-index: 999999999;
+    opacity: 0.3;
+}
+#protetor_opcoes{
+    display: none;
+    position: fixed;
+    width: 100px;
+    height: 80px;
+    z-index: 999999999;
+    opacity: 0.3;
+}
+
+/*Menu da página*/
+#menu{
+    position: fixed;
+    table-layout: fixed;
+    border-collapse:collapse;
+    width: 100%;
+    height: 110px;
+    background-color: #211d1e;
+}
+#instagram{
+    margin: 0px 10px 0px -8px;
+    width: 60px;
+    cursor: pointer;
+}
+#zap{
+    margin: 0px 20px 0px 10px;
+    width: 57px;
+    cursor: pointer;
+}
+#facebook{
+    margin: 0px 25px 5px 0px;
+    width: 43px;
+    cursor: pointer;
+}
+#logo{
+    width: auto;
+    height: 100px;
+    display: block;
+    margin: auto;
+}
+#sacola{
+    cursor: pointer;
+    margin: 0px 60px 5px 0px;
+    width: 45px;
+}
+#quantidade{
+    font-size: 35px;
+    color: #fff;
+}
+#opcoes{
+    width: 40px;
+    margin: 0px 20px 5px 0px;
+    cursor: pointer;
+}
+
+/* Cadastro de Cliente */
+#cliente_cadastro{
+    display: none;
+    position: fixed;
+    padding:2% 0px;
+    margin-top: 110px;
+    width: 100%;
+    height: 30%;
+    background-color: #eee;
+    z-index: 99999999999;
+}
+#cliente_apresentacao{
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+.cliente_cadastro_intrucoes{
+    font-size: 35px;
+}
+.cliente_local_1{
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+    background-color: 2 solid #000;
+    width: 49%;
+}
+#cliente_nome_dado{
+    margin: auto;
+    font-size: 35px;
+    width: 95%;
+}
+#cliente_telefone_dado{
+    margin: auto;
+    font-size: 35px;
+    width: 95%;
+}
+#cliente_endereco_rua{
+    margin: auto;
+    font-size: 35px;
+    width: 96%;
+}
+#cliente_endereco_numero{
+    margin: auto;
+    font-size: 35px;
+    width: 95%;
+}
+#cliente_endereco_ap{
+    margin: auto;
+    font-size: 35px;
+    width: 95%;
+}
+#cliente_endereco_bairro{
+    margin: auto;
+    font-size: 35px;
+    width: 95%;
+}
+#cliente_endereco_cidade{
+    margin: auto;
+    font-size: 35px;
+    width: 95%;
+}
+.cliente_cadastro_local{
+    font-size: 30px;    
+    color: #000;
+}
+#cliente_cancelar{
+    margin: 10px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    font-size: 35px;    
+    color: #000;
+}
+#cliente_cadastrar{
+    margin: 10px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    font-size: 35px;    
+    color: #000;
+}
+
+
+/*Barra de navegação*/
+#navegacao{
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    width: 0%;
+    height: 100%;
+    background-color: #1f1e1c;
+    z-index: 99999;
+}
+#opcoes2{
+    position: static;
+    width: 50px;
+    margin: 0px 20px 5px 0px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+#icone{
+    position:static;
+    width: 150px;
+    display: block;
+    padding-bottom: 5px;
+    margin: auto;
+}
+.lista{
+    cursor: pointer;
+    display: block;
+    color:#fff;
+    font-size:35px;
+    padding-top: 40px;
+    padding-left: 10px;
+    text-decoration: none;
+}
+.lista:hover{
+    text-decoration: underline;
+}
+
+
+/*Compra*/
+#compra{
+    z-index: 99999;
+    display: none;
+    opacity: 0.0;
+    margin-top: 110px;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #777;
+}
+#compra1{
+    display: inline;
+    width: 100%;
+    height: auto;
+}
+#compra2{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 150px;
+}
+#compra_foto{
+    display: block;
+    margin: auto;
+    height: auto;
+    width: 70%;
+    border-radius: 10px;
+}
+#compra_fechar{
+    position: absolute;
+    right: 0px;
+    background-color: #f00;
+    padding: 20px;
+    height: 60px;
+}
+#compra_fechar:hover{
+    cursor: pointer;
+    background-color: #a00;
+}
+
+#compra_descricao{
+    display: inline;
+    margin-bottom: 70px;
+}
+
+#p_onde{
+    margin: 20px 0px 5px 0px;
+    font-size: 10rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+#p_compra_descricao{
+    font-size: 4rem;
+    color: #fff;
+    text-align: center;
+    margin: 0px;
+}
+#p_compra_preco{
+    font-size: 4rem;
+    color: #fff;
+    text-align: center;
+}
+.compra_tamanho{
+    display:block;
+    font-size: 1rem;
+    display: none;
+    padding: 15px;
+    margin: 10px auto;
+    width: 80%;
+    background-color: #eee;
+    border-radius: 10px;
+}
+.compra_tamanho:hover{
+    cursor: pointer;
+    background-color: #aaa;
+}
+#compra_sacola{
+    cursor:pointer;
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 90%;
+    padding: 20px;
+    background-color: #00f;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 10px;
+}
+#compra_sacola:hover{
+    cursor: pointer;
+    background-color: #00a;
+}
+
+/*Seção Lançamento*/
+#lancamento_produtos{
+    table-layout: fixed;
+    border-collapse:collapse;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 60px;
+}
+#lancamento{
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-decoration: underline;
+    padding-top: 140px;
+}
+.lancamento_fotos{
+    cursor:pointer;
+    border-radius: 10px;
+    width: 75%;
+    height: auto;
+}
+.lancamento_descricao{
+    text-align: center;
+    font-size: 30px
+}
+.lancamento_preco{
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 30px;
+}
+/*Seção promoção*/
+#promocao_produtos{
+    table-layout: fixed;
+    border-collapse:collapse;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 60px;
+}
+#promocao{
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.promocao_fotos{
+    cursor:pointer;
+    border-radius: 10px;
+    width: 75%;
+    height: auto;
+}
+.promocao_descricao{
+    text-align: center;
+    font-size: 30px;
+}
+.promocao_preco{
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 30px;
+}
+
+/*Sacola*/
+#minhaSacola{
+    display: none;
+    position: fixed;
+    opacity: 0.0;
+    width: 100%;
+    height: auto;
+}
+#secao_sacola{
+    height: auto;
+}
+#minhaSacola2{
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: #333;
+}
+#sacola_fechar{
+    position: absolute;
+    right: 0px;
+    background-color: #f00;
+    padding: 20px;
+    height: 60px;
+}
+#sacola_fechar:hover{
+    cursor: pointer;
+    background-color: #a00;
+}
+#sacola_limpar{
+    display: flex;
+    margin: auto;
+    margin-bottom: 30px;
+    background-color: #7aa;
+    font-size:30px;
+    padding: 15px;
+    height: 60px;
+}
+#sacola_limpar:hover{
+    background-color: #599;
+    cursor: pointer;
+}
+#local_finalizar_compra{
+    position: fixed;
+    z-index: 999999999;
+    bottom:20px;
+    width: 100%;
+}
+#sacola_finalizar_compra{
+    display: block;
+    margin: 0 auto;
+    padding: 20px 40px;
+    background-color: #00f;
+    font-size: 30px;
+    border-radius: 10px;
+}
+#sacola_finalizar_compra:hover{
+    cursor: pointer;
+    background-color: #00a;
+}
+.sacola_descricao{
+    font-size: 40px;
+    color: #fff;
+    margin-top: 100px;
+    position: absolute;
+}
+.sacola_tamanho{
+    font-size: 40px;
+    color: #fff;
+    margin-top:200px;
+    position: absolute;
+}
+.sacola_preco{
+    font-size: 40px;
+    color: #fff;
+    margin-top:300px;
+    margin-left: 10px;
+    position: absolute;
+}
+.produto{
+    display: none;
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #000;
+}
+.sacola_imagem{
+    width: 35%;
+    height: auto;
+    margin: auto;
+    margin-right: 50px;
+}
+.sacola_remover{
+    padding: 10px;
+    background-color: #a00;
+    font-size: 15px;
+    color:#fff;
+}
+.sacola_remover:hover{
+    cursor: pointer;
+    background-color: #900;
+}
+
+/* Fim da pagina */
+#fim_da_pagina{
+    width: 100%;
+    height: 100px;
+    background-color: #211d1e;
+}
+#menu_fim{
+    table-layout: fixed;
+    border-collapse:collapse;
+}

@@ -1,0 +1,387 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <title>MC Moda</title>
+        <link type="text/css" rel="stylesheet" href="estilo2.css">
+        <script src="script2.js" defer></script>
+    </head>
+
+    <body>
+        <div id="protetor_tela"></div>
+        <!--Menu-->
+        <table id="menu">
+            <td style="text-align: center;">
+                <img src="imagem/instagram.png" id="instagram" onclick="redesSociais('instagram')">
+                <img src="imagem/zap.png" id="zap" onclick="redesSociais('zap')">
+                <img src="imagem/facebook.png" id="facebook" onclick="redesSociais('facebook')">
+            </td>
+            <td>
+                <img src="imagem/mhcs.jpg" id="logo">
+            </td>
+            <td style="text-align: center;">
+                <div id="protetor_sacola"></div>
+                <span id="quantidade"></span>
+                <img src="imagem/sacola.png" id="sacola">
+                <div id="protetor_opcoes"></div>
+                <img src="imagem/opcoes.png" id="opcoes">
+            </td>
+        </table>
+
+        <!-- Cadastro de Cliente -->
+        <div id="cliente_cadastro">
+                <div style=" width:90%; display:block; margin:auto">
+                    <div><p id="cliente_apresentacao"></p></div>
+
+                    <div class="cliente_local_1">
+                        <p class="cliente_cadastro_intrucoes">Coloque seu Nome:</p>
+                        <input id="cliente_nome_dado" type="text">
+                    </div>
+                    <div class="cliente_local_1">
+                        <p class="cliente_cadastro_intrucoes">Coloque seu Telefone:</p>
+                        <input id="cliente_telefone_dado" type="tel" maxlength="16" placeholder="(xx) x xxxx-xxxx">
+                    </div>
+
+                    <p style="text-align: center;" class="cliente_cadastro_intrucoes">Coloque seu Endereço:</p>
+                    <p class="cliente_cadastro_local">Rua:</p>
+                    <input id="cliente_endereco_rua" type="text">
+
+                    <div class="cliente_local_1">
+                        <div>
+                            <p class="cliente_cadastro_local">Numero: </p>
+                            <input id="cliente_endereco_numero" type="text">
+                            <p class="cliente_cadastro_local">AP: </p>
+                            <input id="cliente_endereco_ap" type="text" placeholder="Se não for deixe vazio">        
+                        </div>
+                    </div>
+
+                    <div class="cliente_local_1">
+                        <p class="cliente_cadastro_local">Bairro:</p>
+                        <input id="cliente_endereco_bairro" type="text">
+
+                        <p class="cliente_cadastro_local">Cidade/Estado:</p>
+                        <input id="cliente_endereco_cidade" type="text" placeholder="Coronel Fabriciano/MG">
+                    </div>
+                <a id="cliente_cancelar" onclick="cadastrarCliente()" href="#">Sair sem Cadastrar</a>
+                <a id="cliente_cadastrar" onclick="cadastrarCliente()" href="#">Cadastrar</a>
+            </div>
+        </div>
+
+
+        <!--Opções de navegação-->
+        <div id="navegacao">
+            <img src="imagem/icone.jpeg" id="icone">
+            <img src="imagem/opcoes.png" id="opcoes2">
+                <a class="lista" data-local="lancamento">Lançamento</a><br>
+                <a class="lista" data-local="promocao">Promoção</a><br>
+                <a class="lista" href="#" onclick="alert('indisponível')" style="color:#fff; text-decoration: none;">Estoque</a>
+        </div>
+
+        <!--Compra-->
+        <div id="compra">
+            <div id="compra1"> 
+                <button id="compra_fechar">X</button>
+                <img id="compra_foto">
+            </div>
+            <div id="compra2">
+                <div id="compra_descricao">
+                    <p id="p_onde"></p>
+                    <p id="p_compra_descricao"></p>
+                    <p id="p_compra_preco"></p>
+                </div>
+                <div>
+                    <button class="compra_tamanho"></button>
+                    <button class="compra_tamanho"></button>
+                    <button class="compra_tamanho"></button>
+                    <button class="compra_tamanho"></button>
+                    <button class="compra_tamanho"></button>
+                </div>
+                <button id="compra_sacola">Adicionar na Sacola</button>
+            </div>
+        </div>
+ 
+        <!--Sacola-->
+        <div id="minhaSacola">
+            <section id="secao_sacola">
+                <div id="local_finalizar_compra">
+                    <button id="sacola_finalizar_compra" onclick="whatsapp()">Finalizar Compra</button>
+                </div>
+                <div id="minhaSacola2">
+                    <br>
+                    <button id="sacola_limpar" >Remover todos os itens</button>
+                    <button id="sacola_fechar">X</button>
+                    <div class="produto">
+                        <img class="sacola_imagem">
+                        <spam class="sacola_descricao"></spam>
+                        <spam class="sacola_tamanho"></spam>
+                        <spam class="sacola_preco"></spam>
+                        <button class="sacola_remover" data-local="0">Remover Item</button>
+                    </div>
+                    <div class="produto">
+                        <img class="sacola_imagem">
+                        <spam class="sacola_descricao"></spam>
+                        <spam class="sacola_tamanho"></spam>
+                        <spam class="sacola_preco"></spam>
+                        <button class="sacola_remover" data-local="1">Remover Item</button>
+                    </div>
+                    <div class="produto">
+                        <img class="sacola_imagem">
+                        <spam class="sacola_descricao"></spam>
+                        <spam class="sacola_tamanho"></spam>
+                        <spam class="sacola_preco"></spam>
+                        <button class="sacola_remover" data-local="2">Remover Item</button>
+                    </div>
+                    <div class="produto">
+                        <img class="sacola_imagem">
+                        <spam class="sacola_descricao"></spam>
+                        <spam class="sacola_tamanho"></spam>
+                        <spam class="sacola_preco"></spam>
+                        <button class="sacola_remover" data-local="3">Remover Item</button>
+                    </div>
+                    <div class="produto">
+                        <img class="sacola_imagem">
+                        <spam class="sacola_descricao"></spam>
+                        <spam class="sacola_tamanho"></spam>
+                        <spam class="sacola_preco"></spam>
+                        <button class="sacola_remover" data-local="4">Remover Item</button>
+                    </div>
+                    <div class="produto">
+                        <img class="sacola_imagem">
+                        <spam class="sacola_descricao"></spam>
+                        <spam class="sacola_tamanho"></spam>
+                        <spam class="sacola_preco"></spam>
+                        <button class="sacola_remover" data-local="5">Remover Item</button>
+                    </div>
+                    <div class="produto">
+                        <img class="sacola_imagem">
+                        <spam class="sacola_descricao"></spam>
+                        <spam class="sacola_tamanho"></spam>
+                        <spam class="sacola_preco"></spam>
+                        <button class="sacola_remover" data-local="6">Remover Item</button>
+                    </div>
+                    <div class="produto">
+                        <img class="sacola_imagem">
+                        <spam class="sacola_descricao"></spam>
+                        <spam class="sacola_tamanho"></spam>
+                        <spam class="sacola_preco"></spam>
+                        <button class="sacola_remover" data-local="7">Remover Item</button>
+                    </div>
+                    <div class="produto">
+                        <img class="sacola_imagem">
+                        <spam class="sacola_descricao"></spam>
+                        <spam class="sacola_tamanho"></spam>
+                        <spam class="sacola_preco"></spam>
+                        <button class="sacola_remover" data-local="8">Remover Item</button>
+                    </div>
+                    <div class="produto">
+                        <img class="sacola_imagem">
+                        <spam class="sacola_descricao"></spam>
+                        <spam class="sacola_tamanho"></spam>
+                        <spam class="sacola_preco"></spam>
+                        <button class="sacola_remover" data-local="9">Remover Item</button>
+                    </div>
+                    <div class="produto">
+                        <img class="sacola_imagem">
+                        <spam class="sacola_descricao"></spam>
+                        <spam class="sacola_tamanho"></spam>
+                        <spam class="sacola_preco"></spam>
+                        <button class="sacola_remover" data-local="10">Remover Item</button>
+                    </div>
+                    <div class="produto">
+                        <img class="sacola_imagem">
+                        <spam class="sacola_descricao"></spam>
+                        <spam class="sacola_tamanho"></spam>
+                        <spam class="sacola_preco"></spam>
+                        <button class="sacola_remover" data-local="11">Remover Item</button>
+                    </div>
+                    <div class="produto">
+                        <img class="sacola_imagem">
+                        <spam class="sacola_descricao"></spam>
+                        <spam class="sacola_tamanho"></spam>
+                        <spam class="sacola_preco"></spam>
+                        <button class="sacola_remover" data-local="12">Remover Item</button>
+                    </div>
+                    <div class="produto">
+                        <img class="sacola_imagem">
+                        <spam class="sacola_descricao"></spam>
+                        <spam class="sacola_tamanho"></spam>
+                        <spam class="sacola_preco"></spam>
+                        <button class="sacola_remover" data-local="13">Remover Item</button>
+                    </div>
+                    <div class="produto">
+                        <img class="sacola_imagem">
+                        <spam class="sacola_descricao"></spam>
+                        <spam class="sacola_tamanho"></spam>
+                        <spam class="sacola_preco"></spam>
+                        <button class="sacola_remover" data-local="14">Remover Item</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!--Secao-->
+        <section>
+            <!--Lancamento-->
+            <table id="lancamento_produtos">
+                <p id="lancamento">Lançamento</p>
+                <tr>
+                    <td style="text-align: center">
+                        <img class="lancamento_fotos">
+                    </td>
+                    <td style="text-align: center;">
+                        <img class="lancamento_fotos">
+                    </td>
+                    <td style="text-align: center;">
+                        <img class="lancamento_fotos">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="lancamento_descricao"></p>
+                        <p class="lancamento_preco"></p>
+                    </td>
+                    <td>
+                        <p class="lancamento_descricao"></p>
+                        <p class="lancamento_preco"></p>
+                    </td>
+                    <td>
+                        <p class="lancamento_descricao"></p>
+                        <p class="lancamento_preco"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">
+                        <img class="lancamento_fotos">
+                    </td>
+                    <td style="text-align: center;">
+                        <img class="lancamento_fotos">
+                    </td>
+                    <td style="text-align: center;">
+                        <img class="lancamento_fotos">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="lancamento_descricao"></p>
+                        <p class="lancamento_preco"></p>
+                    </td>
+                    <td>
+                        <p class="lancamento_descricao"></p>
+                        <p class="lancamento_preco"></p>
+                    </td>
+                    <td>
+                        <p class="lancamento_descricao"></p>
+                        <p class="lancamento_preco"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">
+                        <img class="lancamento_fotos">
+                    </td>
+                    <td style="text-align: center;">
+                        <img class="lancamento_fotos">
+                    </td>
+                    <td style="text-align: center;">
+                        <img class="lancamento_fotos">
+                    </td>
+                </tr>
+                <tr id="marcador_fim">
+                    <td>
+                        <p class="lancamento_descricao"></p>
+                        <p class="lancamento_preco"></p>
+                    </td>
+                    <td>
+                        <p class="lancamento_descricao"></p>
+                        <p class="lancamento_preco"></p>
+                    </td>
+                    <td>
+                        <p class="lancamento_descricao"></p>
+                        <p class="lancamento_preco"></p>
+                    </td>
+                </tr>
+            </table>
+                
+            <!--Promoção-->
+            <table id="promocao_produtos">
+                <hr>
+                <p id="promocao">Promoção</p>
+                <tr>
+                    <td style="text-align: center;">
+                        <img class="promocao_fotos">
+                    </td>
+                    <td style="text-align: center;">
+                        <img class="promocao_fotos">
+                    </td>
+                    <td style="text-align: center;">
+                        <img class="promocao_fotos">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="promocao_descricao"></p>
+                        <p class="promocao_preco"></p>
+                    </td>
+                    <td>
+                        <p class="promocao_descricao"></p>
+                        <p class="promocao_preco"></p>
+                    </td>
+                    <td>
+                        <p class="promocao_descricao"></p>
+                        <p class="promocao_preco"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">
+                        <img class="promocao_fotos">
+                    </td>
+                    <td style="text-align: center;">
+                        <img class="promocao_fotos">
+                    </td>
+                    <td style="text-align: center;">
+                        <img class="promocao_fotos">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="promocao_descricao"></p>
+                        <p class="promocao_preco"></p>
+                    </td>
+                    <td>
+                        <p class="promocao_descricao"></p>
+                        <p class="promocao_preco"></p>
+                    </td>
+                    <td>
+                        <p class="promocao_descricao"></p>
+                        <p class="promocao_preco"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">
+                        <img class="promocao_fotos">
+                    </td>
+                    <td style="text-align: center;">
+                        <img class="promocao_fotos">
+                    </td>
+                    <td style="text-align: center;">
+                        <img class="promocao_fotos">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="promocao_descricao"></p>
+                        <p class="promocao_preco"></p>
+                    </td>
+                    <td>
+                        <p class="promocao_descricao"></p>
+                        <p class="promocao_preco"></p>
+                    </td>
+                    <td>
+                        <p class="promocao_descricao"></p>
+                        <p class="promocao_preco"></p>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </body>
+</html>
